@@ -7,7 +7,7 @@ class IOSClassicSwitch extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var landingChangeNotifierProvider = ref.read(landingChangeNotifier);
+    var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
     return CupertinoSwitch(
         value: landingChangeNotifierProvider.isSwitchOn,
         onChanged: (value){

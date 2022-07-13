@@ -7,7 +7,7 @@ class IOSClassicSlider extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var landingChangeNotifierProvider = ref.read(landingChangeNotifier);
+    var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
     return CupertinoSlider(
         value: landingChangeNotifierProvider.sliderValue,
         onChanged: (value){

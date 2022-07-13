@@ -7,7 +7,7 @@ class AndroidClassicSwitch extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var landingChangeNotifierProvider = ref.read(landingChangeNotifier);
+    var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
     return Switch(
         value: landingChangeNotifierProvider.isSwitchOn,
         onChanged: (value){

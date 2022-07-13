@@ -9,7 +9,7 @@ class AndroidClassicRadioButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var landingChangeNotifierProvider = ref.read(landingChangeNotifier);
+    var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
     return SizedBox(
       height: 150.h,
       width: 200.w,

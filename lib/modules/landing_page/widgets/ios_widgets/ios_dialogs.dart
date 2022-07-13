@@ -1,15 +1,14 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shaale_task/styles/app_text_styles.dart';
 
-class IOSClassicAlertDialog extends ConsumerWidget {
+class IOSClassicAlertDialog extends StatelessWidget {
 
   final Widget childWidget;
 
   const IOSClassicAlertDialog({Key? key, required this.childWidget}) : super(key: key);
 
   @override
-  Widget build(BuildContext context,WidgetRef ref) {
+  Widget build(BuildContext context) {
     return CupertinoAlertDialog(
       content: childWidget,
       actions: [

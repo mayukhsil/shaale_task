@@ -8,7 +8,7 @@ class AndroidClassicSlider extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var landingChangeNotifierProvider = ref.read(landingChangeNotifier);
+    var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
     return SizedBox(
       height: 50.h,
       width: 220.w,
