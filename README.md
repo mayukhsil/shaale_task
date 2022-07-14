@@ -2,15 +2,24 @@
 
 Task given by Shaale for the role of Flutter Developer.
 
-## Getting Started
+## Architecture
 
-This project is a starting point for a Flutter application.
+The folders were made with regards to having a scalable and maintainable architecture.
 
-A few resources to get you started if this is your first Flutter project:
+- android/ - Contains the Android project.
+- ios/ - Contains the iOS project.
+- lib/ - Contains the Flutter project.
+- test/ - Contains the Dart tests.
+- pubspec.yaml - Project's pubspec.yaml.
+- README.md - Project's README.md.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+lib is further divided into
+- lib/modules/ - Contains the modules divided on the basis of pages.
+- lib/styles/ - Contains the styling elements of the Project.
+- lib/utils/ - Contains the utility files.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack
+
+- Riverpod for state management and dependency injection.
+- MVVM for the Architecture.
+- Freezed to generate states

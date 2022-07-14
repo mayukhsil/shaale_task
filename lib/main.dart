@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
         designSize: Size(size.size.width, size.size.height),
         minTextAdapt: true,
         builder: (_, __) {
+          //root widget of the app(MaterialApp)
           return MaterialApp(
             title: 'Shaale Task',
             theme: ThemeData.dark().copyWith(

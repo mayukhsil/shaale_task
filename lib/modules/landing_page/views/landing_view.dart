@@ -19,19 +19,28 @@ class LandingView extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //injecting state notifier into the widget
     var landingStateNotifierProvider = ref.watch(landingStateNotifier);
+    //injecting change notifier into the widget
     var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
-    return landingStateNotifierProvider.when(initial: () {
+    //using the state notifier to get the state of the widget
+    return landingStateNotifierProvider.when(
+        //initial state of the widget
+        initial: () {
       return const Scaffold(
         body: Center(
           child: CircularProgressIndicator(),
         ),
       );
-    }, loading: () {
+    },
+        //loading state of the widget
+        loading: () {
       return const Center(
         child: CircularProgressIndicator(),
       );
-    }, data: () {
+    },
+        //data state of the widget
+        data: () {
       return Scaffold(
         appBar: AppBar(
           title: Text(
@@ -190,7 +199,9 @@ class LandingView extends ConsumerWidget {
           ),
         ),
       );
-    }, error: (error) {
+    },
+        //error state of the widget
+        error: (error) {
       return Scaffold(body: Center(child: Text(error!)));
     });
   }

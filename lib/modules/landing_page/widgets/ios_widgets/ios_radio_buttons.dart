@@ -9,12 +9,14 @@ class IOSClassicRadioButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    //injecting the provider
     var landingChangeNotifierProvider = ref.watch(landingChangeNotifier);
     return SizedBox(
       height: 150.h,
       width: 200.w,
       child: Column(
         children: [
+          //material radio buttons(as cupertino doesn't have any radio button elements)
           RadioListTile<String>(
               value: 'Android',
               groupValue: landingChangeNotifierProvider.radioSelectedValue,
