@@ -84,8 +84,8 @@ class LandingView extends ConsumerWidget {
                         style: AppTextStyles.s14(fontType: FontType.MEDIUM),
                       ),
                       landingChangeNotifierProvider.isPlatformAndroid
-                          ? AndroidClassicSlider()
-                          : IOSClassicSlider(),
+                          ? const AndroidClassicSlider()
+                          : const IOSClassicSlider(),
                     ],
                   ),
                   Column(
@@ -95,8 +95,8 @@ class LandingView extends ConsumerWidget {
                         style: AppTextStyles.s14(fontType: FontType.MEDIUM),
                       ),
                       landingChangeNotifierProvider.isPlatformAndroid
-                          ? AndroidClassicSwitch()
-                          : IOSClassicSwitch(),
+                          ? const AndroidClassicSwitch()
+                          : const IOSClassicSwitch(),
                     ],
                   ),
                 ],
@@ -111,8 +111,8 @@ class LandingView extends ConsumerWidget {
                     style: AppTextStyles.s14(fontType: FontType.MEDIUM),
                   ),
                   landingChangeNotifierProvider.isPlatformAndroid
-                      ? AndroidClassicRadioButton()
-                      : IOSClassicRadioButton(),
+                      ? const AndroidClassicRadioButton()
+                      : const IOSClassicRadioButton(),
                 ],
               ),
               SizedBox(
@@ -127,13 +127,13 @@ class LandingView extends ConsumerWidget {
                               ? AndroidClassicAlertDialog(
                                   childWidget: landingChangeNotifierProvider
                                           .isPlatformAndroid
-                                      ? AndroidClassicSlider()
-                                      : IOSClassicSlider())
+                                      ? const AndroidClassicSlider()
+                                      : const IOSClassicSlider())
                               : IOSClassicAlertDialog(
                                   childWidget: landingChangeNotifierProvider
                                           .isPlatformAndroid
-                                      ? AndroidClassicSlider()
-                                      : IOSClassicSlider());
+                                      ? const AndroidClassicSlider()
+                                      : const IOSClassicSlider());
                         });
                   },
                   child: Text(
@@ -152,13 +152,13 @@ class LandingView extends ConsumerWidget {
                               ? AndroidClassicAlertDialog(
                                   childWidget: landingChangeNotifierProvider
                                           .isPlatformAndroid
-                                      ? AndroidClassicSwitch()
-                                      : IOSClassicSwitch())
+                                      ? const AndroidClassicSwitch()
+                                      : const IOSClassicSwitch())
                               : IOSClassicAlertDialog(
                                   childWidget: landingChangeNotifierProvider
                                           .isPlatformAndroid
-                                      ? AndroidClassicSwitch()
-                                      : IOSClassicSwitch());
+                                      ? const AndroidClassicSwitch()
+                                      : const IOSClassicSwitch());
                         });
                   },
                   child: Text(
@@ -176,8 +176,8 @@ class LandingView extends ConsumerWidget {
                         return AndroidClassicAlertDialog(
                           childWidget:
                               landingChangeNotifierProvider.isPlatformAndroid
-                                  ? AndroidClassicRadioButton()
-                                  : IOSClassicRadioButton(),
+                                  ? const AndroidClassicRadioButton()
+                                  : const IOSClassicRadioButton(),
                         );
                       });
                 },
